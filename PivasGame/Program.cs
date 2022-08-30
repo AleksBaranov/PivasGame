@@ -1,10 +1,30 @@
-﻿namespace PivasGame
+﻿
+namespace PivasGame
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            string zaprosVConsol = null;
+            Teksti.Privetstvie();
+            Teksti.IntroPeredZapuskom();
+            zaprosVConsol = Console.ReadLine();
+            
+            while (zaprosVConsol != "ПНХ")
+            {
+                if (zaprosVConsol == "HELP")
+                {
+                    Teksti.HELP();
+                    zaprosVConsol= null;
+                }
+                zaprosVConsol = Console.ReadLine();
+            }
+            
+
+
+
+
+
         }
     }
 }
