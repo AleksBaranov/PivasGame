@@ -11,7 +11,7 @@ namespace PivasGame
 
     public class Teksti
     {
-        public static string tempName;
+        
 
         public static void Privetstvie() 
         {
@@ -22,9 +22,7 @@ namespace PivasGame
         public static void IntroPeredZapuskom()
         {
             Console.Write("Если вы готовы, введите свое имя: ");
-            UserProfil usName = new UserProfil(Console.ReadLine());
-            Console.WriteLine($"Приветствую {usName.Name}.");
-            tempName = usName.Name;
+            Console.WriteLine($"Приветствую {UserProfil.FinishName}.");
             Console.WriteLine("Что, бы получить справку, наберите в строке HELP.");
             
             
@@ -38,8 +36,10 @@ namespace PivasGame
             Console.WriteLine("Набрав команду \"ПИВАС\" - вы заработаете 1 бутылку.");
             Console.WriteLine("Набрав команды \"Купить Алкаша\" или \"Купить Ларек\" - вы купиеь соответствующую позицию, если будете обладать необходимым кол-вом бутылок.");
             Console.WriteLine("Стоимость Алкаша - 10 бутылки. Стоимость Ларька - 50 тубылок.");
-            
         }
+        
+        
+
        
        
         

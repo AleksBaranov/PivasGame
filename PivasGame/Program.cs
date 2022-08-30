@@ -1,4 +1,5 @@
 ﻿
+
 namespace PivasGame
 {
     internal class Program
@@ -7,6 +8,7 @@ namespace PivasGame
         {
             string zaprosVConsol = null;
             Teksti.Privetstvie();
+            UserProfil.EnterName();
             Teksti.IntroPeredZapuskom();
             zaprosVConsol = Console.ReadLine();
             
@@ -18,6 +20,7 @@ namespace PivasGame
                     zaprosVConsol= null;
                 }
                 zaprosVConsol = Console.ReadLine();
+                
             }
             
 

@@ -9,6 +9,8 @@ namespace PivasGame
     public class UserProfil
     {
         private string userName;
+        private static string finishName;
+
 
         public UserProfil(string name)
         {
@@ -19,9 +21,25 @@ namespace PivasGame
             this.userName = name;
             
         }
-        public string Name
+
+        public static void EnterName()
+        {
+            Console.Write("Если вы готовы, введите свое имя: ");
+            UserProfil tempUserNamername = new UserProfil(Console.ReadLine());
+            finishName = tempUserNamername.UserName;
+
+        }
+
+        public string UserName
         {
             get { return userName; }
+           
+            set { UserName = value; }
+        }
+
+        public static string FinishName
+        {
+            get { return finishName; }
         }
                 
      }
