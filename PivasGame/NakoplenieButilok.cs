@@ -132,12 +132,12 @@ namespace PivasGame
                 zaprosVConsol = zaprosVConsol.ToUpper();
             }
             exit = 3;
-            thAlkash.Interrupt();
-            thLarek.Interrupt();
-            thBar.Interrupt();
-            thPivovar.Interrupt();
+            //thAlkash.Interrupt();
+            //thLarek.Interrupt();
+            //thBar.Interrupt();
+            //thPivovar.Interrupt();
             Console.WriteLine($"{UserProfil.FinishName} игра окончена. Вы набрали: {obshayaSummaButilok} бутылок, \nНаняли {kolvoAlkash} Алкашей и построили {kolvoLarek} ларьков, {kolvoBar} баров, {kolvoPivovar} пивоварню"); ;
-
+            Console.ReadLine();
         }
         static void nesetAlkash()
         {

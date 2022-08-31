@@ -11,6 +11,7 @@ namespace PivasGame
             UserProfil.EnterName();
             Teksti.IntroPeredZapuskom();
             NakoplenieButilok.Funkcional();
+            Console.ReadLine();
 
           
             
