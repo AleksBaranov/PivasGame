@@ -34,7 +34,6 @@ namespace PivasGame
         {
             get { return userName; }
            
-            set { UserName = value; }
         }
 
         public static string FinishName

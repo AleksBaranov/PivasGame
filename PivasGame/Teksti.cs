@@ -11,6 +11,8 @@ namespace PivasGame
 
     public class Teksti
     {
+        private static string probeliVerh = "_________________________________________________________";
+        public static string probeliNiz = "--------------------------------------------------------";
         
 
         public static void Privetstvie() 
@@ -21,9 +23,8 @@ namespace PivasGame
         }
         public static void IntroPeredZapuskom()
         {
-            Console.Write("Если вы готовы, введите свое имя: ");
             Console.WriteLine($"Приветствую {UserProfil.FinishName}.");
-            Console.WriteLine("Что, бы получить справку, наберите в строке HELP.");
+            Console.WriteLine("Что, бы получить справку, наберите в строке ПАМАГИ.");
             
             
            
@@ -34,14 +35,15 @@ namespace PivasGame
             Console.WriteLine("Набрав команду \"Скока там\" - вы узнаете колво заработанных бутылок, кол-во \"Алкашей\" и кол-во \"Ларьков\" .");
             Console.WriteLine("Набрав команду \"ПНХ\" - вы завершите игру.");
             Console.WriteLine("Набрав команду \"ПИВАС\" - вы заработаете 1 бутылку.");
-            Console.WriteLine("Набрав команды \"Купить Алкаша\" или \"Купить Ларек\" - вы купиеь соответствующую позицию, если будете обладать необходимым кол-вом бутылок.");
-            Console.WriteLine("Стоимость Алкаша - 10 бутылки. Стоимость Ларька - 50 тубылок.");
-        }
-        
-        
+            Console.WriteLine("Набрав определенные команды, вы можете приобрести те или иные опции развития. Таблица опций приведена ниже:");
+            Console.WriteLine(probeliVerh);
+            Console.WriteLine($"|Команда\t| цена\t| бутылок\t| раз в секунд\t|\n{probeliNiz}");
+            Console.WriteLine($"Алкаш\t\t| {NakoplenieButilok.CenaAlaksh}\t| {NakoplenieButilok.DastAlkash}\t\t| {NakoplenieButilok.TimerAlkash}\t\t|\n{probeliNiz}");
+            Console.WriteLine($"Ларек\t\t| {NakoplenieButilok.CenaLarek}\t| {NakoplenieButilok.DastLarek}\t\t| {NakoplenieButilok.TimerLarek}\t\t|\n{probeliNiz}");
+            Console.WriteLine($"Бар\t\t| {NakoplenieButilok.CenaBar}\t| {NakoplenieButilok.DastBar}\t\t| {NakoplenieButilok.TimerBar}\t\t|\n{probeliNiz}");
+            Console.WriteLine($"Пивоварня\t| {NakoplenieButilok.CenaPivovar}\t| {NakoplenieButilok.DastPivovar}\t\t| {NakoplenieButilok.TimerPivovar}\t\t|\n{probeliNiz}");
 
-       
-       
-        
+        }
+
     }
 }
