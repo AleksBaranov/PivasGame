@@ -41,14 +41,16 @@ namespace PivasGame
         public static void Funkcional()
         {
             Thread thAlkash = new Thread(nesetAlkash);
-                thAlkash.Start();
+            thAlkash.Start();
             Thread thLarek = new Thread(nesetLarek);
-                thLarek.Start();
+            thLarek.Start();
             Thread thBar = new Thread(nesetBar);
-                thBar.Start();
+            thBar.Start();
             Thread thPivovar = new Thread(nesetPivovar);
-                thPivovar.Start();
+            thPivovar.Start();
 
+            Teksti.HELP();
+            Console.Write("Я жду Вашей команды милорд: ");
             zaprosVConsol = Console.ReadLine();
             zaprosVConsol = zaprosVConsol.ToUpper();
 
@@ -60,82 +62,110 @@ namespace PivasGame
                     Teksti.HELP();
                     zaprosVConsol = null;
                 }
+
                 if (zaprosVConsol == "ПИВАС")
                 {
+                    pereraschet();
                     obshayaSummaButilok++;
+                    Console.Clear();
+
+                    kolvoRabov();
+                    
                 }
 
-                if (zaprosVConsol == "СКОКА ТАМ")
-                {
-                    obshayaSummaButilok = obshayaSummaButilok + tempSumAlkash + tempSumLarek + tempSumBar + tempSumPivovar ;
-                    tempSumAlkash = 0;
-                    tempSumLarek = 0;
-                    tempSumBar = 0;
-                    tempSumPivovar = 0;
+                //if (zaprosVConsol == "СКОКА ТАМ")
+                //{
+                //    obshayaSummaButilok = obshayaSummaButilok + tempSumAlkash + tempSumLarek + tempSumBar + tempSumPivovar;
+                //    tempSumAlkash = 0;
+                //    tempSumLarek = 0;
+                //    tempSumBar = 0;
+                //    tempSumPivovar = 0;
 
-                    System.Console.WriteLine($"Ваше колличество бутылок равно: {obshayaSummaButilok}, что позволяет нанять {obshayaSummaButilok / cenaAlkasha} Алкаша или поставить {obshayaSummaButilok / cenaLarek} ларьков, или {obshayaSummaButilok / cenaBar} бар, или {obshayaSummaButilok / cenaPivovar} пивоварня.");
-                    System.Console.WriteLine($"Колво Алкашей = {kolvoAlkash}. Колво Ларьков = {kolvoLarek}. Колво Баров = {kolvoBar}. Колво Пивоварен = {kolvoPivovar}."); ;
-                }
+                //    kolvoRabov();   
+                //}
                 if (zaprosVConsol == "АЛКАШ")
                 {
+                    pereraschet();
                     if (obshayaSummaButilok < 10)
                     {
-                        System.Console.WriteLine("У вас не достаточно бутылок. Стоимость Алкаша 10 бутылок.");
+                        Console.Clear();
+                        kolvoRabov();
+                        Console.WriteLine();
+                        Console.WriteLine("!!! У вас не достаточно бутылок. Стоимость Алкаша 10 бутылок.!!!");
+                        Console.WriteLine();
+
                     }
                     else
                     {
                         obshayaSummaButilok = obshayaSummaButilok - 10;
                         kolvoAlkash++;
+                        Console.Clear();
+                        kolvoRabov();
                     }
                 }
 
                 if (zaprosVConsol == "ЛАРЕК")
                 {
+                    pereraschet();
                     if (obshayaSummaButilok < 50)
                     {
-                        System.Console.WriteLine("У вас не достаточно бутылок. Стоимость Ларька 50 бутылок.");
+                        Console.Clear();
+                        kolvoRabov();
+                        Console.WriteLine();
+                        System.Console.WriteLine("!!! У вас не достаточно бутылок. Стоимость Ларька 50 бутылок.!!!");
                     }
                     else
                     {
                         obshayaSummaButilok = obshayaSummaButilok - 50;
                         kolvoLarek++;
+                        Console.Clear();
+                        kolvoRabov();
                     }
                 }
 
                 if (zaprosVConsol == "БАР")
                 {
+                    pereraschet();
                     if (obshayaSummaButilok < 500)
                     {
-                        System.Console.WriteLine("У вас не достаточно бутылок. Стоимость Бара 500 бутылок.");
+                        Console.Clear();
+                        kolvoRabov();
+                        Console.WriteLine();
+                        Console.WriteLine("!!! У вас не достаточно бутылок. Стоимость Бара 500 бутылок.!!!");
                     }
                     else
                     {
                         obshayaSummaButilok = obshayaSummaButilok - 500;
                         kolvoBar++;
+                        Console.Clear();
+                        kolvoRabov();
                     }
                 }
 
                 if (zaprosVConsol == "ПИВОВАРНЯ")
                 {
+                    pereraschet();
                     if (obshayaSummaButilok < 500)
                     {
-                        System.Console.WriteLine("У вас не достаточно бутылок. Стоимость Пивоварни 3000 бутылок.");
+                        Console.Clear();
+                        kolvoRabov();
+                        Console.WriteLine();
+                        System.Console.WriteLine("!!! У вас не достаточно бутылок. Стоимость Пивоварни 3000 бутылок.!!!");
                     }
                     else
                     {
                         obshayaSummaButilok = obshayaSummaButilok - 3000;
                         kolvoPivovar++;
+                        Console.Clear();
+                        kolvoRabov();
                     }
                 }
-
+                Console.WriteLine();
+                Console.Write("Я жду Вашей команды милорд: ");
                 zaprosVConsol = Console.ReadLine();
                 zaprosVConsol = zaprosVConsol.ToUpper();
             }
             exit = 3;
-            //thAlkash.Interrupt();
-            //thLarek.Interrupt();
-            //thBar.Interrupt();
-            //thPivovar.Interrupt();
             Console.WriteLine($"{UserProfil.FinishName} игра окончена. Вы набрали: {obshayaSummaButilok} бутылок, \nНаняли {kolvoAlkash} Алкашей и построили {kolvoLarek} ларьков, {kolvoBar} баров, {kolvoPivovar} пивоварню"); ;
             Console.ReadLine();
         }
@@ -181,7 +211,7 @@ namespace PivasGame
             get { return timerAlkash; }
         }
         public static int TimerLarek
-        { 
+        {
             get { return timerLarek; }
         }
         public static int TimerBar
@@ -227,6 +257,32 @@ namespace PivasGame
         {
             get { return cenaPivovar; }
         }
+
+        public static long ObshayaSummaButilok
+        {
+            get { return obshayaSummaButilok; }
+        }
+
+        static void kolvoRabov()
+        {
+            pereraschet();
+
+
+            //Console.Clear();
+            Teksti.HELP();
+            Console.WriteLine();
+            Console.WriteLine($"На вас работают: Алкашей = {kolvoAlkash}; Ларьков = {kolvoLarek}; Баров = {kolvoBar}; Пивоварен = {kolvoPivovar}."); ;
+
+        }
+        static void pereraschet()
+        {
+            obshayaSummaButilok = obshayaSummaButilok + tempSumAlkash + tempSumLarek + tempSumBar + tempSumPivovar;
+            tempSumAlkash = 0;
+            tempSumLarek = 0;
+            tempSumBar = 0;
+            tempSumPivovar = 0;
+        }
+
     }
 
 }

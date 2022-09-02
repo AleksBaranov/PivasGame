@@ -6,12 +6,15 @@ namespace PivasGame
     {
         static void Main(string[] args)
         {
-            
+
             Teksti.Privetstvie();
             UserProfil.EnterName();
             Teksti.IntroPeredZapuskom();
             NakoplenieButilok.Funkcional();
-            Console.ReadLine();
+            //Console.ReadLine();
+
+
+            //Teksti.HELP();
 
           
             
