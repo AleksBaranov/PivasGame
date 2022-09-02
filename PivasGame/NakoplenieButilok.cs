@@ -57,11 +57,11 @@ namespace PivasGame
 
             while (zaprosVConsol != "ПНХ")
             {
-                if (zaprosVConsol == "ПАМАГИ")
-                {
-                    Teksti.HELP();
-                    zaprosVConsol = null;
-                }
+                //if (zaprosVConsol == "ПАМАГИ")
+                //{
+                //    Teksti.HELP();
+                //    zaprosVConsol = null;
+                //}
 
                 if (zaprosVConsol == "ПИВАС")
                 {

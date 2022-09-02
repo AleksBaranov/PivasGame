@@ -32,7 +32,6 @@ namespace PivasGame
             string probeliVerh = new string('_', 57);
             string probeliNiz = new string('-', 57);
             string probeltext = new string(' ', 57);
-            Console.WriteLine("Набрав команду \"Скока там\" - вы узнаете колво заработанных бутылок, кол-во \"Алкашей\" и кол-во \"Ларьков\" .");
             Console.WriteLine("Набрав команду \"ПНХ\" - вы завершите игру.");
             Console.WriteLine("Набрав команду \"ПИВАС\" - вы заработаете 1 бутылку.");
             Console.WriteLine("Набрав определенные команды, вы можете приобрести те или иные опции развития. Таблица опций приведена ниже:");

@@ -3,12 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32804.467
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PivasGame", "PivasGame\PivasGame.csproj", "{95D0956E-F69C-49A5-887A-85DDC83499EE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PivasGame", "PivasGame\PivasGame.csproj", "{95D0956E-F69C-49A5-887A-85DDC83499EE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
+		Description = версия 2.10
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{95D0956E-F69C-49A5-887A-85DDC83499EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
